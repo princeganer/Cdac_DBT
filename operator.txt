@@ -1,0 +1,18 @@
+create table empl
+(
+id number(2),
+ename varchar2(10),
+sal number(6)
+);
+
+insert into empl
+values(1,'aalesh',50000);
+insert into empl
+values(2,'mandar',40000);
+insert into empl
+values(3,'anand',30000);
+insert into empl
+values(4,'abhinav',20000);
+insert into empl
+values(5,'raunak',10000);
+

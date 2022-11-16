@@ -1,0 +1,54 @@
+create table dept1(
+did number(2) primary key,
+dname varchar2(10) not null,
+dloc varchar2(10) not null
+);
+
+create table emp1(
+eid number(2) primary key,
+deptid number(2) not null unique,
+ename varchar2(10) not null,
+age number(2) check (age>=21),
+sal number(5) default(20000),
+doj date,
+foreign key(deptid) references dept1(did)
+);
+
+insert into emp1
+values(10,1,'mandar',24,90000,'25-apr-2023');
+insert into emp1
+values(11,2,'aalesh',24,90000,'25-apr-2023');
+insert into emp1
+values(13,3,'abhi',25,90000,'25-apr-2023');
+insert into emp1
+values(14,1,'raunak',22,90000,'24-apr-2020');
+
+insert into dept1
+values(1,'R and D','pune');
+insert into dept1
+values(2,'tech','mumbai');
+insert into dept1
+values(3,'mkt','jalgaon');
+
+
+select * from emp1;
+select * from dept1;
+
+
+insert into dept1
+values(1,'R and D','pune');
+insert into dept1
+values(2,'tech','mumbai');
+insert into dept1
+values(3,'mkt','jalgaon');
+
+select emp1.eid,emp1.ename,emp1.deptid,emp1.age,emp1.sal,emp1.doj,dept1.dname,dept1.dloc
+from emp1,dept1 where dept1.did=emp1.deptid;
+
+update emp1
+set deptid= 3
+where ename='abhi';
+
+
+
+

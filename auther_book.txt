@@ -1,0 +1,43 @@
+create table author1
+(
+auno number(2) not null,
+author varchar2(20) not null,
+constraint pk_bno primary key(auno)
+);
+
+insert into author1
+values(1,'amish');
+insert into author1
+values(2,'mandar');
+=====================================================
+create table books
+(
+srno number(2),
+auno number(2),
+bname varchar2(10),
+constraint pksr primary key(srno),
+constraint bok foreign key(auno) references author1(auno)
+);
+
+
+insert into books
+values(1,1,'seeta');
+insert into books
+values(2,1,'ram');
+insert into books
+values(3,2,'shiva');
+insert into books
+values(4,2,'krishna');
+
+
+
+
+select * from author1;
+
+select * from books;
+
+
+select b.srno,b.auno,b.bname,a.author
+from author1 a, books b
+where a.auno=b.auno;
+
