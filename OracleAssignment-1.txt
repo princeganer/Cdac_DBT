@@ -26,7 +26,7 @@
     2     3    11   80000
     3     3    11   75000
     3     2    10   800000
-
+	
 
 1. Display names of salesmen who work in Pune.
 2. Delete customer from Pimpri area.
@@ -36,7 +36,4 @@
 6. Give rating 5 to all the vehicles with price greater than 90000.
 7. Delete all the records from Customer table.
 8. Delete entire table Salesman.
-
-
-
  
