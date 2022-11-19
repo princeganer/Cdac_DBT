@@ -205,8 +205,23 @@ where sal<=2500;
 
 
 select dept
+********************** 18 ******************************
+18. Find employees who earn salary more than the avg sal of their dept.
 
+    select * 
+    from emp e
+    where sal > (select avg(sal)
+                 from emp d
+                 where d.deptno = e.deptno);
 
+********************** 19 ******************************
+19. Display all employees with sal more than his manager's sal.
+
+    select *
+    from emp e
+    where sal<=(select sal
+		from emp m
+  		where m.empno=e.mgr);
 
 
 
