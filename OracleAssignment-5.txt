@@ -22,6 +22,11 @@
    (Begin and end values included.). Return all the fields. 16
 16. From the emp table , write a SQL query to find those employees whose salary falls within the range of the smallest
     salary and 2500. Return all the fields.
+17. Write a query which will display dept no and dept names to which no employee is assigned.
+18. Find employees who earn salary more than the avg sal of their dept.
+19. Display all employees with sal more than his manager's sal.
+
+
 
 select * from emp;
 ********************** 1 ******************************
@@ -174,7 +179,9 @@ from emp;
 
 select empno,ename,sal
 from emp
-where regexp_like(ename,'^B.*') and job = 'MANAGER';
+where mgr = any (select empno
+                 from emp
+                 where regexp_like(ename,'^C.*'));
 
 ********************** 15 ******************************
 15. From the emp table, write a SQL query to find those employees whose salary is in the range of 1000, and 3000
@@ -191,12 +198,13 @@ where sal between 1000 and 3000;
 select * from emp
 where sal<=2500;
 
+********************** 17 ******************************
+17. Write a query which will display dept no and dept names to which no employee is assigned.
 
 
 
 
-
-
+select dept
 
 
 
