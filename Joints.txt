@@ -1,0 +1,41 @@
+**************** Cross join *******************
+select e.empno, e.ename,e.deptno, d.dname
+from emp e
+where e.deptno = 
+cross join dept d;
+
+**************** equi join *******************
+select e.empno, e.ename, e.deptno, d.loc
+from emp e
+inner join dept d
+on e.deptno = d.deptno;
+
+**************** Non equi join *******************
+select e.empno, e.ename, e.sal, s.grade
+from emp e
+inner join salgrade s
+on e.sal between s.losal and s.hisal;
+
+**************** Self join *******************
+select e.empno, e.ename, e.mgr, m.ename
+from emp e
+join emp m
+on e.mgr = m.empno;
+
+**************** Left join *******************
+select e.empno, e.ename, e.deptno, d.dname
+from dept d
+left join emp e
+on e.deptno = d.deptno;
+
+**************** Right join *******************
+select e.empno, e.ename, e.deptno, d.dname
+from emp e
+Right join dept d
+on e.deptno = d.deptno;
+
+**************** Full join *******************
+select e.empno, e.ename, e.deptno, d.dname
+from emp e
+full join dept d
+on e.deptno = d.deptno;
