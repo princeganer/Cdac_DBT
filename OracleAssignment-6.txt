@@ -1,4 +1,4 @@
-create following tables and solve following questions
+create following tables and solve following
 
 ******************** Tables *********************************
 1. faculty(fid(PK),fname,sp.skill1,sp.skill2)
