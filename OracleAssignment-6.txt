@@ -1,4 +1,6 @@
 create following tables and solve following questions
+
+******************** Tables *********************************
 1. faculty(fid(PK),fname,sp.skill1,sp.skill2)
    
     CREATE TABLE faculty(
@@ -25,37 +27,59 @@ create following tables and solve following questions
    rname varchar2(15) not null,
    rloc varchar2(20));
 
-faculty
+******************** Table Data *********************************
+faculty---
 fid fname spskill1 spskill2
 10 Amol database JAVA
 11 Asha JAVA MySQL
 12 Kiran CPP Database
 13 Seeta MySQL database
 
-courses
+courses---
 cid cname rid fid
 121 DBDA 100 10
 131 DAC 101
 141 DTISS
 151 DIOT 105 12
 
-    INSERT courses values(121,'DBDA',100, 10);
-    INSERT courses (cid, cname, rid) values(131,'DAC',101);
-    INSERT courses (cid, cname) values(141,'DTISS');
-    INSERT courses values(151,'DIOT',105, 12);
-
-Room
+Room---
 roomid rname rloc
 100 jasmin 1st floor
 101 Rose 2nd floor
 105 Lotus 1st floor
 103 Mogra 1st floor
 
+******************** Insert Data *********************************
 
-INSERT room values(100,'Jasmin','1st floor');
-INSERT room values(101,'Rose','2nd floor');
-INSERT room values(105,'Lotus','1st floor');
-INSERT room values(103,'Mogra','1st floor');
+INSERT into faculty
+values('Amol','database','JAVA');
+INSERT into faculty
+values('Asha','JAVA','MySQL');
+INSERT into faculty
+values('Kiran','CPP','Database');
+INSERT into faculty
+values('Seete','MySQL','Database');
+
+INSERT into courses 
+values(121,'DBDA',100, 10);
+INSERT into courses (cid, cname, rid) 
+values(131,'DAC',101);
+INSERT into courses (cid, cname) 
+values(141,'DTISS');
+INSERT into courses 
+values(151,'DIOT',105, 12);
+
+
+INSERT into room 
+values(100,'Jasmin','1st floor');
+INSERT into room 
+values(101,'Rose','2nd floor');
+INSERT into room 
+values(105,'Lotus','1st floor');
+INSERT into room 
+values(103,'Mogra','1st floor');
+
+******************** Questions *********************************
 
 1. list all courses for which no room is assigned and all rooms which are available
 
